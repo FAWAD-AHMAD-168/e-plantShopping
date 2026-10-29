@@ -216,28 +216,77 @@
     font-size: 20px;
     font-weight: 900;
    }
-.continue_shopping_btn{
-  margin-top: -50px;
-}
-   @media (max-width: 768px) {
-    .cart-container {
-      padding: 10px; /* Reduce padding */
-    }
-  
-    .total_cart_amount {
-      font-size: 18px; /* Reduce font size */
-    }
+   .continue_shopping_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
-
-  .get-started-button1 {
-    padding: 15px 75px;
-    font-size: 23px;
+  
+  /* Continue Shopping button */
+  .get-started-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    min-height: 50px;
+    padding: 12px 20px;
+    margin: 0;
+    box-sizing: border-box;
     border: none;
-    border-radius: 5px;
-    background-color: #4caf50;
+    border-radius: 8px;
+    background-color: #2e7d32;
     color: white;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 40px;
   }
   
+  .get-started-button:hover {
+    background-color: #1b5e20;
+  }
+  
+  /* Checkout button */
+  .get-started-button1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    min-height: 50px;
+    padding: 12px 20px;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .get-started-button1:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Responsive layout for mobile screens */
+  @media (max-width: 480px) {
+    .continue_shopping_btn {
+      gap: 12px;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .get-started-button,
+    .get-started-button1 {
+      width: 100%;
+      max-width: 280px;
+      min-height: 48px;
+    }
+  }
